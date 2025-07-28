@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "tasks" ALTER COLUMN "deadlineDate" SET DATA TYPE TEXT,
+ALTER COLUMN "deadlineTime" SET DATA TYPE TEXT;
