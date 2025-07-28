@@ -23,7 +23,7 @@ app.get("/", (_rep, res) => {
 
 app.use("/auth", authRouter);
 app.use("/tasks",taskRouter);
-app.use("/user",userRouter)
+app.use("/users",userRouter)
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => console.log("App is live on port ($4000)"));
