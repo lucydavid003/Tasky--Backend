@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin:  process.env.ORIGIN || "http://localhost:5173",
 
     credentials: true,
   })
@@ -23,7 +23,7 @@ app.get("/", (_rep, res) => {
 
 app.use("/auth", authRouter);
 app.use("/tasks",taskRouter);
-app.use("/users",userRouter)
+app.use("/user",userRouter)
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => console.log("App is live on port ($4000)"));
